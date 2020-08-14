@@ -170,7 +170,9 @@ for i in range(len(df_HV_checks.columns)):
     if i % 5 == 0:
             print('column',i,'out of',len(df_HV_checks.columns),'columns')
     for j in range(NumberOfRecords):
-        HV_checksWS[chr(i+66)+str(j+2)] = df_HV_checks.iloc[j,i]
+        HV_checksWS[chr(i+65)+str(j+2)] = df_HV_checks.iloc[j,i]
+        if 'DATE' in df_HV_checks.columns[i].upper() :
+            HV_checksWS[chr(i+65)+str(j+2)].number_format = 'M/D/YYYY'
 
 
 print()
