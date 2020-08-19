@@ -39,7 +39,7 @@ dir_list = [name for name in os.listdir(year_path) if os.path.isdir(os.path.join
 dir_name = [dir1 for dir1 in dir_list if (prisma_month_abbr in dir1 or prisma_month_name in dir1)]
 
 if len(dir_name) != 1:
-    print('\n\nThere are' + str(len(dir_name)) + 'names in the folder list for the reporting month.')
+    print('\n\nThere are ' + str(len(dir_name)) + ' names in the folder list for the reporting month.')
     print('Check',year_path,'for correct folder then continue when fixed.\n\n')
     print('Quiting...\n\n')
     os.exit(0)
